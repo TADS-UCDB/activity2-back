@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex12</title>
+</head>
+
+<body>
+    <script>
+        function login(usuario, senha) {
+            return new Promise(function (resolve, reject) {
+                if (usuario === 'admin' && senha === '1234') {
+                    resolve('Login bem-sucedido');
+                } else {
+                    reject('Falha no login');
+                }
+            });
+        }
+
+        login('admin', '1234')
+            .then(result => console.log(result))
+            .catch(error => console.log(error));
+
+        login('user', 'abcd')
+            .then(result => console.log(result))
+            .catch(error => console.log(error));
+    </script>
+</body>
+
+</html>

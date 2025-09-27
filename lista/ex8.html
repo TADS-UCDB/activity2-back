@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex8</title>
+</head>
+
+<body>
+    <script>
+        function division(n1, n2, callback) {
+            if (n2 === 0) {
+                callback('Erro: divisão por zero');
+            } else {
+                callback(null, n1 / n2);
+            }
+            callback(division);
+        }
+
+        division(2, 0, function (error, result) {
+            if (error) {
+                console.log(error);
+            } else {
+                console.log(result);
+            }
+        })
+    </script>
+</body>
+
+</html>

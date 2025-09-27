@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex2</title>
+</head>
+
+<body>
+    <script>
+        const carro = {
+            marca: "Gol",
+            exibirMarca: function () {
+                console.log("Marca do carro: " + this.marca);
+            }
+        };
+
+        const mostrarCorreto = carro.exibirMarca.bind(carro);
+        mostrarCorreto();
+    </script>
+</body>
+
+</html>

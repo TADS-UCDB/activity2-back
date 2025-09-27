@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex6</title>
+</head>
+
+<body>
+    <script>
+        function findData(callback) {
+            setTimeout(function () {
+                const data = [{
+                    nome: 'Diogo',
+                    idade: 33
+                }, {
+                    nome: 'Adriano',
+                    idade: 37
+                }, {
+                    nome: 'Karol',
+                    idade: 25
+                }, {
+                    nome: 'João',
+                    idade: 30
+                }];
+                callback(data);
+            }, 1500);
+        }
+
+        findData(function (data) {
+            console.log(data);
+        });
+
+    </script>
+</body>
+
+</html>
